@@ -4,6 +4,9 @@ require 'zip'
 require 'open-uri'
 require './file'
 require './download-unzip'
+require './font'
+
+allfile = "/*"
 
 def welcome
   puts "Welcome to Font Installer!!"
@@ -13,7 +16,8 @@ def selectos
   puts "Please select the type of OS you are using."
   puts "1) Windows with system files stored on the C drive"
   puts "2) Most of Linux"
-  puts "3) Other"
+  puts "3) Other Windows"
+  puts "4) Other"
   print "Please enter number. :"
   os = gets.to_i
   
@@ -23,6 +27,11 @@ def selectos
     when 2 then
       installdir = '/usr/share/fonts/#{fontname}'
     when 3 then
+      puts "Enter the directory where you want to store the installed font files (if you need to create a directory of font names downstairs, use \#\{fontname\} for the font name)"
+      print ">"
+      allfile = allfile.gsub!("/", "\\")
+      expanddir = expanddir.gsub!("/", "\\")
+    when 4 then
       puts "Enter the directory where you want to store the installed font files (if you need to create a directory of font names downstairs, use \#\{fontname\} for the font name)"
       print ">"
     else
