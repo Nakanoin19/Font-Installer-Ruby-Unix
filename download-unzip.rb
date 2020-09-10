@@ -1,5 +1,9 @@
 require 'open-uri'
 require 'zip'
+require 'Fileutils'
+
+FileUtils.mkdir(fontname)
+FileUtils.cd(fontname)
 
 open(downloadfile) do |file|
   open(zipname, "w+b") do |out|
@@ -14,3 +18,5 @@ Zip::InputStream.open(zipname) do |input|
   unzipbuffer = input.read
   File.write(unzipfilename, unzipbuffer)
 end
+
+FileUtils.cd("..")
