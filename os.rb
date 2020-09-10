@@ -1,3 +1,8 @@
+# setup
+require 'Fileutils'
+require 'zip'
+require 'uri-tools'
+
 def selectos
   puts "Please select the type of OS you are using."
   puts "1) Windows with system files stored on the C drive"
