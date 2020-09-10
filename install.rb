@@ -5,8 +5,15 @@ require 'open-uri'
 require './file'
 require './download-unzip'
 require './font'
+require './help'
 
 allfile = "/*"
+
+if ARGV[0] == "--help" then
+  help
+else
+  font = ARGV[0]
+end
 
 def welcome
   puts "Welcome to Font Installer!!"
