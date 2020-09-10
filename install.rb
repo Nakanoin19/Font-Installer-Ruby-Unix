@@ -1,7 +1,13 @@
 # setup
 require 'Fileutils'
 require 'zip'
-require 'uri-tools'
+require 'open-uri'
+require './file'
+require './download-unzip'
+
+def welcome
+  puts "Welcome to Font Installer!!"
+end
 
 def selectos
   puts "Please select the type of OS you are using."
@@ -24,3 +30,9 @@ def selectos
       exit
   end
 end
+
+# commands
+welcome
+selectos
+download_unzip
+file
