@@ -27,10 +27,10 @@ Ruby
 
 #### Rubyライブラリ
 ()内はgemのパッケージ名です。
+
+こちらは[depends.rb](./depends.rb)で解消できます。
 ```
 FileUtils(fileutils)
 Rubyzip(rubyzip)
 OpenUri(rubysl-open-uri)
 ```
-
-こちらは[depends.rb](./depends.rb)で解消できます。
