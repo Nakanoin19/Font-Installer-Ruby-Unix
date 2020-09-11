@@ -2,10 +2,10 @@
 require 'Fileutils'
 require 'zip'
 require 'open-uri'
-require './file'
-require './download-unzip'
-require './font'
-require './help'
+require './utils/file'
+require './utils/download-unzip'
+require './utils/font'
+require './utils/help'
 
 $allfile = "/*"
 
