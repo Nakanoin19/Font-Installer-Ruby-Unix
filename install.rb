@@ -37,17 +37,19 @@ def selectos
   
   case os
     when 1 then
-      installdir = 'C:\windows\fonts'
+      $installdir = 'C:\windows\fonts'
     when 2 then
-      installdir = '/usr/share/fonts/#{fontname}'
+      $installdir = '/usr/share/fonts/#{fontname}'
     when 3 then
       puts "Enter the directory where you want to store the installed font files (if you need to create a directory of font names downstairs, use \#\{fontname\} for the font name)"
       print ">"
-      allfile = allfile.gsub!("/", "\\")
-      expanddir = expanddir.gsub!("/", "\\")
+      $installdir = gets.chomp
+      $allfile = allfile.gsub!("/", "\\")
+      $expanddir = expanddir.gsub!("/", "\\")
     when 4 then
       puts "Enter the directory where you want to store the installed font files (if you need to create a directory of font names downstairs, use \#\{fontname\} for the font name)"
       print ">"
+      $installdir = gets.chomp
     else
       puts "Error"
       exit
