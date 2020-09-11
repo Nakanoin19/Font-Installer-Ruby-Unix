@@ -7,7 +7,7 @@ require './download-unzip'
 require './font'
 require './help'
 
-allfile = "/*"
+$allfile = "/*"
 
 if ARGV[0] == nil then
   help
