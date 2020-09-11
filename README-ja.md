@@ -1,4 +1,10 @@
 # Font-Installer-Ruby
+
+[日本語](./README-ja.md)|[English](./README.md)
+---|---
+
+**The English version is [here](./README.md).**
+
 Font InstallerのRuby版です。
 
 ## 実行方法
