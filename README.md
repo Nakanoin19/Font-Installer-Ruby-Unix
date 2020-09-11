@@ -7,24 +7,24 @@
 
 The Ruby version of the Font Installer.
 
-## How to run.
+## How to run
 Run it with administrative privileges.
 
 You can also use sudo.
 
-### Windows.
+### Windows
 ```cmd
 ruby install.rb [font name]
 ```
 
-### Other OSes.
+### Other OSes
 ```sh
 ruby ./install.rb [font name]
 ````
 
-## Dependency.
+## Dependency
 
-### Software, etc.
+### Software, etc
 ```
 Ruby
 ```
