@@ -9,8 +9,15 @@ require './help'
 
 allfile = "/*"
 
-if ARGV[0] == "--help" then
+if ARGV[0] == nil then
   help
+  exit
+elsif ARGV[0] == "--help" then
+  help
+  exit
+elsif ARGV[1] == "--help" then
+  help
+  exit
 else
   font = ARGV[0]
 end
