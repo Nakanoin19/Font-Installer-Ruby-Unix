@@ -23,6 +23,8 @@ ruby ./install.rb [フォント名]
 Ruby
 ```
 
+[Rubyのホームページはこちら](https://www.ruby-lang.org/)
+
 #### Rubyライブラリ
 ()内はgemのパッケージ名です。
 ```
@@ -31,4 +33,4 @@ Rubyzip(rubyzip)
 OpenUri(rubysl-open-uri)
 ```
 
-こちらは[depends.rb](./depends.rb)
+こちらは[depends.rb](./depends.rb)で解消できます。
