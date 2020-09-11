@@ -1,31 +1,31 @@
 # Font-Installer-Ruby
 Font InstallerのRuby版です。
 
-### 実行方法
+## 実行方法
 管理者権限で実行してください。
 
 sudoなどでもいいです。
 
-#### Windows
+### Windows
 ```cmd
 ruby install.rb [フォント名]
 ```
 
-#### 他のOS
+### 他のOS
 ```sh
 ruby ./install.rb [フォント名]
 ```
 
-### 依存関係
+## 依存関係
 
-#### ソフトウェアなど
+### ソフトウェアなど
 ```
 Ruby
 ```
 
 [Rubyのホームページはこちら](https://www.ruby-lang.org/)
 
-#### Rubyライブラリ
+### Rubyライブラリ
 ()内はgemのパッケージ名です。
 
 こちらは[depends.rb](./depends.rb)で解消できます。
