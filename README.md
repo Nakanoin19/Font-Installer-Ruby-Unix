@@ -30,3 +30,5 @@ FileUtils(fileutils)
 Rubyzip(rubyzip)
 OpenUri(rubysl-open-uri)
 ```
+
+こちらは[depends.rb](./depends.rb)
