@@ -6,6 +6,9 @@ def fontlist
   puts "open-sans"
   puts "oswald"
   puts "raleway"
+  puts "poppins"
+  puts "pt-sans"
+  puts "merriweather"
 end
 
 if font == "inter" then
@@ -41,9 +44,24 @@ if font == "raleway" then
   $fontname = "Raleway"
   $expanddir = "Raleway"
 end
+
 if font == "poppins" then
   $zipname = "poppins.zip"
   $downloadfile = "https://fonts.google.com/download?family=Poppins"
   $fontname = "Poppins"
   $expanddir = "Poppins/static"
+end
+
+if font == "pt-sans"
+  $zipname = "pt-sans.zip"
+  $downloadfile = "https://fonts.google.com/download?family=PT+Sans"
+  $fontname = "PT_Sans"
+  $expanddir = "PT_Sans/static"
+end
+
+if font == "merriweather"
+  $zipname = "Merriweather.zip"
+  $downloadfile = "https://fonts.google.com/download?family=Merriweather"
+  $fontname = "Merriweather"
+  $expanddir = "Merriweather/static"
 end
