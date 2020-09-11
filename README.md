@@ -24,9 +24,8 @@ Ruby
 ```
 
 #### Rubyライブラリ
-{}内はgemでのパッケージ名です。
+()内はgemでのパッケージ名です。
 ```
-FileUtils{fileutils}
-Rubyzip{rubyzip}
-OpenUri(Ruby標準ライブラリです)
+FileUtils(fileutils)
+Rubyzip(rubyzip)
 ```
