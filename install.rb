@@ -19,7 +19,7 @@ elsif ARGV[1] == "--help" then
   help
   exit
 else
-  font = ARGV[0]
+  $font = ARGV[0]
 end
 
 def welcome
