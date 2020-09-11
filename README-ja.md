@@ -40,3 +40,8 @@ FileUtils(fileutils)
 Rubyzip(rubyzip)
 OpenUri(rubysl-open-uri)
 ```
+
+## お願い
+このスクリプトは翻訳サイトを使用して日本語から英語に翻訳しています(作成者の知識不足で)。
+
+翻訳に誤りがありましたらPull RequestやIssueを送ってくださると助かります。
