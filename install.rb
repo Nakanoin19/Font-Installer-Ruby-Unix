@@ -36,7 +36,7 @@ def selectos
   
   case os
     when 1 then
-      $installdir = 'C:\windows\fonts'
+      $installdir = 'C:/windows/fonts'
     when 2 then
       $installdir = '/usr/share/fonts/#{fontname}'
     when 3 then
