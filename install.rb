@@ -10,8 +10,10 @@ require './utils/help'
 $allfile = "/*"
 
 if ARGV[0] == nil then
-  help
-  exit
+  fontlist
+  puts "Please select the font you want to install from the list above."
+  print ">"
+  $font = gets.chomp
 elsif ARGV[0] == "--help" then
   help
   exit
