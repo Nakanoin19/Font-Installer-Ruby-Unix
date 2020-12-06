@@ -13,6 +13,7 @@ Font InstallerのRuby版です。
 sudoなどでもいいです。
 
 ```sh
+bundle install
 ruby ./install.rb [フォント名]
 ```
 
@@ -20,7 +21,7 @@ ruby ./install.rb [フォント名]
 
 - Ruby<br>[Rubyのホームページはこちら](https://www.ruby-lang.org/)
 
-- bundler
+- bundler(Rubyライブラリ)
 ```sh
 gem install 'bundler'
 ```
