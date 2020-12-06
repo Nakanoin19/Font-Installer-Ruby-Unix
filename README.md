@@ -18,9 +18,7 @@ ruby ./install.rb [font name]
 
 ## Dependency
 
-- Ruby
-
-[Ruby's website is here](https://www.ruby-lang.org/)
+- Ruby<br>[Ruby's website is here](https://www.ruby-lang.org/)
 
 - bundler
 
