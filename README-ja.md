@@ -18,23 +18,12 @@ ruby ./install.rb [フォント名]
 
 ## 依存関係
 
-### ソフトウェアなど
-```
-Ruby
-```
+- Ruby<br>[Rubyのホームページはこちら](https://www.ruby-lang.org/)
 
-[Rubyのホームページはこちら](https://www.ruby-lang.org/)
-
-### Rubyライブラリ
-()内はgemのパッケージ名です。
-
-こちらは[depends.rb](./depends.rb)で解消できます。
+- bundler
+```sh
+gem install 'bundler'
 ```
-FileUtils(fileutils)
-Rubyzip(rubyzip)
-OpenUri(rubysl-open-uri)
-```
-
 ## お願い
 このスクリプトは翻訳サイトを使用して日本語から英語に翻訳しています(作成者の知識不足で)。
 
