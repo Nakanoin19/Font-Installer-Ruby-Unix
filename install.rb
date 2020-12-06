@@ -2,31 +2,10 @@
 require 'Fileutils'
 require 'zip'
 require 'open-uri'
-require './utils/file'
 require './utils/font'
-require './utils/help'
 
 $allfile = "/*"
 $installdir = '/usr/share/fonts/#{fontname}'
-
-if ARGV[0] == nil then
-  fontlist
-  puts "Please select the font you want to install from the list above."
-  print ">"
-  $font = gets.chomp
-elsif ARGV[0] == "--help" then
-  help
-  exit
-elsif ARGV[1] == "--help" then
-  help
-  exit
-else
-  $font = ARGV[0]
-end
-
-def welcome
-  puts "Welcome to Font Installer!!"
-end 
 
 def download_unzip
   require 'open-uri'
@@ -59,6 +38,36 @@ def file
   FileUtils.rm_r(fontname)
   FileUtils.rm(zipname)
 end
+
+def help
+  require './utils/font'
+  puts "Font Installer Help"
+  puts "Execution Method"
+  puts "ruby ./install.rb [fontname]"
+  fontlist
+  puts "If you need help, please run it with the word '--help'."
+  puts "You don't need to enter the font name when you run it with the word '--help'."
+end
+
+if ARGV[0] == nil then
+  fontlist
+  puts "Please select the font you want to install from the list above."
+  print ">"
+  $font = gets.chomp
+elsif ARGV[0] == "--help" then
+  help
+  exit
+elsif ARGV[1] == "--help" then
+  help
+  exit
+else
+  $font = ARGV[0]
+end
+
+def welcome
+  puts "Welcome to Font Installer!!"
+end
+
 # commands
 welcome
 selectos
