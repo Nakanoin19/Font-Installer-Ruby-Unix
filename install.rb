@@ -26,21 +26,7 @@ end
 
 def welcome
   puts "Welcome to Font Installer!!"
-end
-  case os
-    when 1 then
-      $installdir = 'C:/windows/fonts'
-    when 2 then
-      $installdir = '/usr/share/fonts/#{fontname}'
-    when 3 then
-      puts "Enter the directory where you want to store the installed font files (if you need to create a directory of font names downstairs, use \#\{fontname\} for the font name)(change the path separator '\' to '/'.)"
-      print ">"
-      $installdir = gets.chomp
-    else
-      puts "Error"
-      exit
-  end
-end
+end 
 
 def download_unzip
   require 'open-uri'
@@ -65,6 +51,13 @@ def download_unzip
   end
   
   FileUtils.cd("..")
+end
+
+def file
+  FileUtils.mkdir_p(installdir + fontname)
+  FileUtils.mv(expanddir + allfile, installdir + fontname)
+  FileUtils.rm_r(fontname)
+  FileUtils.rm(zipname)
 end
 # commands
 welcome
