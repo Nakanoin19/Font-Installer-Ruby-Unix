@@ -2,7 +2,7 @@
 require 'Fileutils'
 require 'zip'
 require 'open-uri'
-require './utils/font'
+require_relative './utils/font'
 
 $allfile = "/*"
 $installdir = '/usr/share/fonts/#{fontname}'
