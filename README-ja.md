@@ -12,12 +12,6 @@ Font InstallerのRuby版です。
 
 sudoなどでもいいです。
 
-### Windows
-```cmd
-ruby install.rb [フォント名]
-```
-
-### 他のOS
 ```sh
 ruby ./install.rb [フォント名]
 ```
