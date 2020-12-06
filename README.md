@@ -12,12 +12,6 @@ Run it with administrative privileges.
 
 You can also use sudo.
 
-### Windows
-```cmd
-ruby install.rb [font name]
-```
-
-### Other OSes
 ```sh
 ruby ./install.rb [font name]
 ````
