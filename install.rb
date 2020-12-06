@@ -3,11 +3,11 @@ require 'Fileutils'
 require 'zip'
 require 'open-uri'
 require './utils/file'
-require './utils/download-unzip'
 require './utils/font'
 require './utils/help'
 
 $allfile = "/*"
+$installdir = '/usr/share/fonts/#{fontname}'
 
 if ARGV[0] == nil then
   fontlist
@@ -27,15 +27,6 @@ end
 def welcome
   puts "Welcome to Font Installer!!"
 end
-
-def selectos
-  puts "Please select the type of OS you are using."
-  puts "1) Windows with system files stored on the C drive"
-  puts "2) Most of Linux"
-  puts "3) Other Windows and Other OSes"
-  print "Please enter number. :"
-  os = gets.to_i
-  
   case os
     when 1 then
       $installdir = 'C:/windows/fonts'
@@ -51,6 +42,30 @@ def selectos
   end
 end
 
+def download_unzip
+  require 'open-uri'
+  require 'zip'
+  require 'Fileutils'
+  
+  FileUtils.mkdir(fontname)
+  FileUtils.cd(fontname)
+  
+  open(downloadfile) do |file|
+    open(zipname, "w+b") do |out|
+      out.write(file.read)
+    end
+  end
+  
+  Zip::InputStream.open(zipname) do |input|
+    unzipentry = input.get_next_entry
+    Dir.mkdir(File.dirname(unzipentry.name))
+    unzipfilename = unzipentry.name
+    unzipbuffer = input.read
+    File.write(unzipfilename, unzipbuffer)
+  end
+  
+  FileUtils.cd("..")
+end
 # commands
 welcome
 selectos
