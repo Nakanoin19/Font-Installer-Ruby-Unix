@@ -18,21 +18,14 @@ ruby ./install.rb [font name]
 
 ## Dependency
 
-### Software, etc
-```
-Ruby
-```
+- Ruby
 
 [Ruby's website is here](https://www.ruby-lang.org/)
 
-### Ruby Library
-() is the package name of the gem.
+- bundler
 
-This can be resolved in [depends.rb](./depends.rb).
-```
-FileUtils(fileutils)
-Rubyzip(rubyzip)
-OpenUri(rubysl-open-uri)
+```sh
+gem install 'bundler'
 ```
 
 ## Request
