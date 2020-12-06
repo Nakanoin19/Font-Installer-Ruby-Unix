@@ -8,10 +8,6 @@ $allfile = "/*"
 $installdir = '/usr/share/fonts/#{fontname}'
 
 def download_unzip
-  require 'open-uri'
-  require 'zip'
-  require 'Fileutils'
-  
   FileUtils.mkdir(fontname)
   FileUtils.cd(fontname)
   
@@ -34,13 +30,12 @@ end
 
 def file
   FileUtils.mkdir_p(installdir + fontname)
-  FileUtils.mv(expanddir + allfile, installdir + fontname)
+  FileUtils.mv(expanddir + "/*", installdir + fontname)
   FileUtils.rm_r(fontname)
   FileUtils.rm(zipname)
 end
 
 def help
-  require './utils/font'
   puts "Font Installer Help"
   puts "Execution Method"
   puts "ruby ./install.rb [fontname]"
