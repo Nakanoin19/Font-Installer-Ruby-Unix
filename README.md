@@ -20,7 +20,7 @@ ruby ./install.rb [font name]
 
 - Ruby<br>[Ruby's website is here](https://www.ruby-lang.org/)
 
-- bundler
+- bundler(Ruby Liblary)
 
 ```sh
 gem install 'bundler'
