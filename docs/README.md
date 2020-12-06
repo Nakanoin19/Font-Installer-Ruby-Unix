@@ -13,6 +13,7 @@ Run it with administrative privileges.
 You can also use sudo.
 
 ```sh
+bundle install
 ruby ./install.rb [font name]
 ````
 
